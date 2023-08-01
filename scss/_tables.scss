@@ -1,0 +1,70 @@
+@use './variables' as *;
+
+table {
+  border-spacing: 0 0.5em;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: unset !important; 
+
+  tr {
+    th {
+      color: $color--white;
+      background-color: $color--darkgray;
+    }
+
+    td {
+      background-color: $color--gray-white;
+      &:first-child {
+        border-top-left-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+      }
+      &:last-child {
+        border-top-right-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+      }
+    }
+  }
+}
+
+.category-icon,
+.row-icon {
+  fill: #424242;
+}
+
+.header-icon {
+  fill: $color--white;
+}
+
+td, th {
+  padding: 1em;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 2em;
+  margin-bottom: 10px;
+}
+
+.created, .category1 {
+  width: 8em;
+}
+
+.category-icon,
+.active-icon {
+  width: 4em;
+}
+
+.active, .archived {
+  width: 20%;
+}
+
+svg {
+  max-height: 2em;
+  max-width: 2em;
+}
+
+@media screen and (max-width: 800px) {
+  .created, .dates {
+    width: 0;
+  }
+}
